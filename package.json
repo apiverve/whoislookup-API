@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/whoislookup",
+  "version": "1.0.0",
+  "description": "Whois Lookup is a simple tool for checking the registration of a domain name. It returns the name and contact information of the domain owner, the domain registrar, and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/whoislookup-API.git"
+  },
+  "keywords": [
+    "whois lookup"," whois lookup api"," whois lookup tool"," whois lookup software"," whois lookup service"," whois lookup library"," whois lookup sdk"," whois lookup code"," whois lookup script"," whois lookup program"," whois lookup application"," whois lookup app"," whois lookup utility"," whois lookup helper"," whois lookup helper tool"," whois lookup helper software"," whois lookup helper service"," whois lookup helper library"," whois lookup helper sdk"," whois lookup helper code"," whois lookup helper script"," whois lookup helper program"," whois lookup helper application"," whois lookup helper app"," whois lookup helper tool"," whois lookup helper utility"," whois lookup helper"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/whoislookup-API/issues"
+  },
+  "homepage": "https://github.com/apiverve/whoislookup-API",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "3.3.2",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  }
+}
