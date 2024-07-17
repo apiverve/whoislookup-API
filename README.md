@@ -71,24 +71,24 @@ api.execute(query, function (error, data) {
   "status": "ok",
   "error": null,
   "data": {
+    "createdDate": "1996-02-22T05:00:00Z",
+    "dNSSEC": "unsigned",
+    "domainName": "MYSPACE.COM",
     "domainStatus": [
       "clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited",
       "clientRenewProhibited https://icann.org/epp#clientRenewProhibited",
       "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
       "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited"
     ],
-    "domainName": "MYSPACE.COM",
-    "registryDomainID": "3877095_DOMAIN_COM-VRSN",
-    "registrarWHOISServer": "whois.godaddy.com",
-    "registrarURL": "http://www.godaddy.com",
-    "updatedDate": "2023-01-17T00:16:21Z",
-    "createdDate": "1996-02-22T05:00:00Z",
     "expiryDate": "2029-02-23T05:00:00Z",
     "registrar": "GoDaddy.com, LLC",
-    "registrarIANAID": "146",
     "registrarAbuseContactEmail": "abuse@godaddy.com",
     "registrarAbuseContactPhone": "480-624-2505",
-    "dNSSEC": "unsigned"
+    "registrarIANAID": "146",
+    "registrarURL": "http://www.godaddy.com",
+    "registrarWHOISServer": "whois.godaddy.com",
+    "registryDomainID": "3877095_DOMAIN_COM-VRSN",
+    "updatedDate": "2023-01-17T00:16:21Z"
   }
 }
 ```
