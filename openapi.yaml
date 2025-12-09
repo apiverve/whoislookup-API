@@ -1,0 +1,81 @@
+openapi: 3.0.4
+info:
+  title: WHOIS Lookup
+  description: Whois Lookup is a simple tool for checking the registration of a domain name. It returns the name and contact information of the domain owner, the domain registrar, and more.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/whoislookup:
+    get:
+      summary: Lookup Domain
+      description: Whois Lookup is a simple tool for checking the registration of a domain name. It returns the name and contact information of the domain owner, the domain registrar, and more.
+      operationId: whoislookup
+      parameters:
+      - name: domain
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The domain name for which you want to get the registration data (e.g., myspace.com)
+        example: myspace.com
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  domainStatus:
+                  - clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+                  - clientRenewProhibited https://icann.org/epp#clientRenewProhibited
+                  - clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+                  - clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+                  domainName: MYSPACE.COM
+                  registryDomainID: 3877095_DOMAIN_COM-VRSN
+                  registrarWHOISServer: whois.godaddy.com
+                  registrarURL: http://www.godaddy.com
+                  updatedDate: 2023-01-17T00:16:21.0000000Z
+                  createdDate: 1996-02-22T05:00:00.0000000Z
+                  expiryDate: 2029-02-23T05:00:00.0000000Z
+                  registrar: GoDaddy.com, LLC
+                  registrarIANAID: '146'
+                  registrarAbuseContactEmail: abuse@godaddy.com
+                  registrarAbuseContactPhone: 480-624-2505
+                  dNSSEC: unsigned
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
